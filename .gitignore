@@ -1,3 +1,6 @@
 .vscode/
 *.sqlite3
 Insta/migrations/
+.DS_Store
+*.pyc
+__pycache__/
