@@ -18,6 +18,9 @@ class PostListView(LoginRequiredMixin, ListView):
     login_url = "login"
 
     def get_queryset(self):
+        if not self.request.user.is_authenticated:
+            return 
+
         current_user = self.request.user
         following = set()
         for conn in UserConnection.objects.filter(creator=current_user).select_related('following'):
