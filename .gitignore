@@ -4,3 +4,6 @@ Insta/migrations/
 .DS_Store
 *.pyc
 __pycache__/
+static/images/
+*.jpg
+*.png
