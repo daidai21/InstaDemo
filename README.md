@@ -12,3 +12,10 @@ python manage.py runserver
 # nohup python manage.py runserver& >> django.log  # daemon process and backup log
 # exit  # quit pipenv virtualenv
 ```
+
+### Create superuser admin
+
+`python manage.py createusperuser`
+
+`admin` - `123456`
+
