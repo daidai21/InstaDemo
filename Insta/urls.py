@@ -3,7 +3,7 @@ from django.urls import path
 from Insta.views import (EditProfile, ExploreView, PostCreateView,
                          PostDeleteView, PostDetailView, PostListView,
                          PostUpdateView, SignUp, UserProfile, addComment,
-                         addLike, toggleFollow)
+                         addLike, toggleFollow, FollowersView, FollowingsView)
 
 urlpatterns = [
     path('', PostListView.as_view(), name='home'),
@@ -18,4 +18,6 @@ urlpatterns = [
     path('like', addLike, name='addLike'),
     path('comment', addComment, name='addComment'),
     path('explore', ExploreView.as_view(), name='explore'),
+    path('followers/<int:pk>', FollowersView.as_view(), name = 'followers'),
+    path('followings/<int:pk>', FollowingsView.as_view(), name = 'followings'),
 ]

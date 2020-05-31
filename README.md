@@ -19,6 +19,13 @@ python manage.py runserver
 
 `admin` - `123456`
 
+ordinary user:
+
+```
+username: a ~ e
+password: 12345qwert12345
+```
+
 ### QA
 
 ```text
@@ -36,4 +43,4 @@ Insta/urls.py中的url改为  path('like/', addLike, name='addLike'),
 
 ### TODO
 
-- [ ] show followers / following list
+- [x] show followers / following list
