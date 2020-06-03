@@ -39,6 +39,9 @@ Insta/urls.py中的url改为  path('like/', addLike, name='addLike'),
 >>> if not self.request.user.is_authenticated:
 >>>     return 
 先要验证用户是否登陆，再执行接下来的步骤
+
+***** django-imagekit *****
+这个包安装的时候配置的路径或者环境变量的问题，就在本地环境和当前的虚拟环境都使用`pip install django-imagekit`或者`pip3 install django-imagekit`安装这个库
 ```
 
 ### TODO
