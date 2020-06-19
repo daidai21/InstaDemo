@@ -49,6 +49,20 @@ Insta/urls.py中的url改为  path('like/', addLike, name='addLike'),
 
 ***** vscode自动补全问题 *****
 安装自动补全和语法检查之类的vscode插件就好，尝试：jinja、Better Jinja、Python Template Snippets等插件
+
+***** create post 限定当前用户的问题 *****
+view里面的PostCreateView里面加个表单验证就好了
+"""py
+class PostCreateView(CreateView):
+    model = Post
+    template_name = "make_post.html"
+    fields = '__all__'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+"""
+参照链接：https://github.com/daidai21/InstaDemo/blob/master/Insta/views.py#L61-L63
 ```
 
 ### TODO
