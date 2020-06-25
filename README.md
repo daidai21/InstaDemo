@@ -63,8 +63,17 @@ class PostCreateView(CreateView):
         return super().form_valid(form)
 """
 参照链接：https://github.com/daidai21/InstaDemo/blob/master/Insta/views.py#L61-L63
+
+***** 安装虚拟环境使用pipenv遇到问题 *****
+放弃使用虚拟环境，也就是pipenv工具，直接使用pip(或者pip3，根据自己的环境配置)
+"""
+pip install -r requirements.txt
+"""
+执行上边的命令直接安装对应的所有依赖包
 ```
 
 ### TODO
 
 - [x] show followers / following list
+- [ ] Restful version
+- [x] add requirements.txt file
