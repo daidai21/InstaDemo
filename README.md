@@ -77,3 +77,5 @@ pip install -r requirements.txt
 - [x] show followers / following list
 - [ ] Restful version
 - [x] add requirements.txt file
+- [ ] BUG (PostCreateView) PostUpdateView PostDeleteView permission control
+> Google key words: django UpdateView DeleteView permission control

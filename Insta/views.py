@@ -58,6 +58,7 @@ class PostCreateView(CreateView):
     template_name = "make_post.html"
     fields = '__all__'
 
+    # FIXME: The function realizes the permission control, but security is not implemented.
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
