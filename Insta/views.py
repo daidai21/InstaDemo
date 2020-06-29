@@ -53,12 +53,13 @@ class ExploreView(LoginRequiredMixin, ListView):
         return Post.objects.all().order_by('-posted_on')[:20]
 
 
-class PostCreateView(CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = "make_post.html"
     fields = '__all__'
 
     # FIXME: The function realizes the permission control, but security is not implemented.
+    # FIXME: "form.as_p" would be better to handle this at backend.
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)

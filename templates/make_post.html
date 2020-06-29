@@ -5,7 +5,15 @@
 <h1>New Post</h1>
 <form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p }}
+    <p>
+        <label for="id_title">Title:</label>
+        <textarea name="title" cols="40" rows="10" id="id_title">
+        </textarea>
+    </p>
+    <p>
+        <label for="id_image">Image:</label>
+        <input type="file" name="image" accept="image/*" id="id_image">
+    </p>
     <button type="submit">Save</button>
 </form>
 

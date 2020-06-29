@@ -79,3 +79,5 @@ pip install -r requirements.txt
 - [x] add requirements.txt file
 - [ ] BUG (PostCreateView) PostUpdateView PostDeleteView permission control
 > Google key words: django UpdateView DeleteView permission control
+- [ ] BUG mobile not display navbar in login page
+- [x] PostCreateView select author error
