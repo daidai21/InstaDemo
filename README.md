@@ -51,7 +51,7 @@ Insta/urls.py中的url改为  path('like/', addLike, name='addLike'),
 安装自动补全和语法检查之类的vscode插件就好，尝试：jinja、Better Jinja、Python Template Snippets等插件
 
 ***** create post 限定当前用户的问题 *****
-view里面的PostCreateView里面加个表单验证就好了
+view里面的PostCreateView里面加个表单验证就好了，还有修改html这里提交的时候把form表单这里的author去掉
 """py
 class PostCreateView(CreateView):
     model = Post
@@ -63,6 +63,7 @@ class PostCreateView(CreateView):
         return super().form_valid(form)
 """
 参照链接：https://github.com/daidai21/InstaDemo/blob/master/Insta/views.py#L61-L63
+https://github.com/daidai21/InstaDemo/blob/master/templates/make_post.html
 
 ***** 安装虚拟环境使用pipenv遇到问题 *****
 放弃使用虚拟环境，也就是pipenv工具，直接使用pip(或者pip3，根据自己的环境配置)
