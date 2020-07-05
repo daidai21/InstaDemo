@@ -65,6 +65,10 @@ class PostCreateView(CreateView):
 参照链接：https://github.com/daidai21/InstaDemo/blob/master/Insta/views.py#L61-L63
 https://github.com/daidai21/InstaDemo/blob/master/templates/make_post.html
 
+或者
+
+PostCreateView中添加form_valid和修改fields为"""fields = {'title', 'image'}""
+
 ***** 安装虚拟环境使用pipenv遇到问题 *****
 放弃使用虚拟环境，也就是pipenv工具，直接使用pip(或者pip3，根据自己的环境配置)
 """
